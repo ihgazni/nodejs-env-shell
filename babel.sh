@@ -12,8 +12,10 @@ import sys
 
 dn=sys.argv[1]
 
-fns = fs.walkf(dn)
-cmds = elel.mapv(fns,lambda ele:"babel --plugins transform-es2015-modules-commonjs "+ele+" > "+ele)
+fns = fs.walkf(sn="src")
+cmds = elel.mapv(fns,lambda ele:"babel --plugins transform-es2015-modules-commonjs "+ele+" > "+"nd"+ele)
+elel.for_each(cmds,os.system)
+
 #
 
 alias babel625="python3 /mnt/sdb/ACORN/acmodu/babel625.py $1"
