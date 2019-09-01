@@ -10,9 +10,9 @@ import os
 import elist.elist as elel
 import sys
 
-dn=sys.argv[1]
+sn=sys.argv[1]
 
-fns = fs.walkf(sn="src")
+fns = fs.walkf(sn)
 cmds = elel.mapv(fns,lambda ele:"babel --plugins transform-es2015-modules-commonjs "+ele+" > "+"nd"+ele)
 elel.for_each(cmds,os.system)
 
